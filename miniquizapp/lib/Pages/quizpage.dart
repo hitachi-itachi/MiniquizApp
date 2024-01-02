@@ -11,13 +11,25 @@ class quizPage extends StatefulWidget {
 class _QuizPageState extends State<quizPage> {
   Color buttonColor = Colors.white; // Initial color of the button
   Color button1Color = Colors.white;
+  bool showFloatingButton = false;
 
   void changeColor() {
     setState(() {
       // Change button color when tapped
       buttonColor = Colors.green; // Change this to the desired color
       button1Color = Colors.red;
+      showFloatingButton = true;
     });
+  }
+
+  FloatingActionButton nextButton() {
+    return FloatingActionButton(
+      child: Text('Next', style: TextStyle(fontSize: 20.0)),
+      backgroundColor: Colors.blue,
+      onPressed: () {
+        // Add your onPressed logic here
+      },
+    );
   }
 
   @override
@@ -27,6 +39,16 @@ class _QuizPageState extends State<quizPage> {
           title: Text("Quiz app"),
           centerTitle: true,
           backgroundColor: Colors.yellow,
+        ),
+        floatingActionButton: Visibility(
+          visible: showFloatingButton,
+          child: FloatingActionButton(
+            child: Text('Next', style: TextStyle(fontSize: 20.0)),
+            backgroundColor: Colors.blue,
+            onPressed: () {
+              // Add your onPressed logic here
+            },
+          ),
         ),
         body: Stack(children: [
           Container(
@@ -56,6 +78,7 @@ class _QuizPageState extends State<quizPage> {
                   GestureDetector(
                     onTap: () {
                       changeColor();
+                      nextButton();
                     },
                     child: Container(
                       alignment: Alignment.center,
