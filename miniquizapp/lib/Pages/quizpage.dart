@@ -61,7 +61,10 @@ class _QuizPageState extends State<quizPage> {
                 Container(
                   height: 200,
                   width: 410,
-                  child: Text("Hello World"),
+                  child: Image.asset(
+                    "images/teddy.png",
+                    fit: BoxFit.fitHeight,
+                  ),
                   decoration: BoxDecoration(
                     color: Colors.white,
                   ),
