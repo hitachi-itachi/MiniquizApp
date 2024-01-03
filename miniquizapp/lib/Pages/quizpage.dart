@@ -9,7 +9,8 @@ class quizPage extends StatefulWidget {
 }
 
 class _QuizPageState extends State<quizPage> {
-  Color buttonColor = Colors.white; // Initial color of the button
+  Color buttonColor =
+      Color.fromARGB(255, 250, 250, 250); // Initial color of the button
   Color button1Color = Colors.white;
   bool showFloatingButton = false;
 
@@ -36,9 +37,13 @@ class _QuizPageState extends State<quizPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Quiz app"),
+          title: Text("Question 1: What animal is this?",
+              style: TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,
+              )),
           centerTitle: true,
-          backgroundColor: Colors.yellow,
+          backgroundColor: Colors.orange,
         ),
         floatingActionButton: Visibility(
           visible: showFloatingButton,
@@ -52,7 +57,7 @@ class _QuizPageState extends State<quizPage> {
         ),
         body: Stack(children: [
           Container(
-            color: Colors.orange,
+            color: Color.fromARGB(59, 139, 135, 135),
           ),
           Positioned(
             child: Row(
@@ -87,7 +92,11 @@ class _QuizPageState extends State<quizPage> {
                       alignment: Alignment.center,
                       height: 100,
                       width: 300,
-                      child: Text("Hello World"),
+                      child: Text("Cow",
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          )),
                       decoration: BoxDecoration(
                         color: button1Color,
                         borderRadius: BorderRadius.circular(12),
@@ -111,7 +120,11 @@ class _QuizPageState extends State<quizPage> {
                     alignment: Alignment.center,
                     height: 100,
                     width: 300,
-                    child: Text("Hello World"),
+                    child: Text("Bear",
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold,
+                        )),
                     decoration: BoxDecoration(
                       color: buttonColor,
                       borderRadius: BorderRadius.circular(12),
@@ -136,7 +149,11 @@ class _QuizPageState extends State<quizPage> {
                     alignment: Alignment.center,
                     height: 100,
                     width: 300,
-                    child: Text("Hello World"),
+                    child: Text("Dog",
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold,
+                        )),
                     decoration: BoxDecoration(
                       color: button1Color,
                       borderRadius: BorderRadius.circular(12),
