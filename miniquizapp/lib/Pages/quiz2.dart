@@ -1,14 +1,14 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-class quizPage extends StatefulWidget {
-  const quizPage({Key? key}) : super(key: key);
+class quizPage2 extends StatefulWidget {
+  const quizPage2({Key? key}) : super(key: key);
 
   @override
-  _QuizPageState createState() => _QuizPageState();
+  _QuizPageState2 createState() => _QuizPageState2();
 }
 
-class _QuizPageState extends State<quizPage> {
+class _QuizPageState2 extends State<quizPage2> {
   Color buttonColor =
       Color.fromARGB(255, 250, 250, 250); // Initial color of the button
   Color button1Color = Colors.white;
@@ -37,7 +37,7 @@ class _QuizPageState extends State<quizPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Question 1: What animal is this?",
+          title: Text("Question 2: What animal shit is this?",
               style: TextStyle(
                 fontSize: 20.0,
                 fontWeight: FontWeight.bold,
