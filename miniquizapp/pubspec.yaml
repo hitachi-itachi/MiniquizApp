@@ -63,6 +63,8 @@ flutter:
     - images/teddy.png
     - images/strangers-from-hell-netflix-review.jpg
     - images/sypnosis.jpeg
+    - images/um.png
+    - images/dentist.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

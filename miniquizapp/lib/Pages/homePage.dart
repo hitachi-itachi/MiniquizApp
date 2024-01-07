@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:miniquizapp/Pages/Sypnosis.dart';
 import 'package:miniquizapp/Pages/teddyquiz.dart';
+import 'package:miniquizapp/Pages/Character.dart';
 
 class homePage extends StatefulWidget {
   const homePage({super.key});
@@ -65,7 +66,8 @@ class _homePageState extends State<homePage> {
               children: <Widget>[
                 GestureDetector(
                   onTap: () {
-                    //changeColor();
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => character()));
                   },
                   child: Container(
                     alignment: Alignment.center,
