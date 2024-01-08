@@ -65,6 +65,10 @@ flutter:
     - images/sypnosis.jpeg
     - images/um.png
     - images/dentist.jpg
+    - images/Hong.jpg
+    - images/jong.jpeg
+    - images/byuen.jpg
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
