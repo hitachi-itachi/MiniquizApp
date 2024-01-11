@@ -3,54 +3,69 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class Um extends StatelessWidget {
-  const Um({super.key});
+  const Um({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Ms-Um",
-              style: TextStyle(
-                fontSize: 30.0,
-                fontWeight: FontWeight.bold,
-              )),
-          centerTitle: true,
-          backgroundColor: Colors.deepPurpleAccent,
+      appBar: AppBar(
+        title: Text(
+          "Ms-Um",
+          style: TextStyle(
+            fontSize: 30.0,
+            fontWeight: FontWeight.bold,
+          ),
         ),
-        body: Stack(children: [
-          Container(
-            decoration: BoxDecoration(
-                gradient: LinearGradient(
-              colors: [Color.fromARGB(255, 137, 98, 220), Colors.purple],
+        centerTitle: true,
+        backgroundColor: Colors.deepPurpleAccent,
+      ),
+      body: SingleChildScrollView(
+        child: Container(
+          width: double.infinity,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Color.fromARGB(255, 137, 98, 220),
+                Colors.purple,
+              ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               stops: [0.0, 1.0],
-            )),
+            ),
           ),
-          Positioned(
-              top: 10,
-              child: Container(
-                height: 200,
-                width: 410,
-                child: Image.asset(
-                  "images/um.png",
-                  fit: BoxFit.fitHeight,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Center(
+                  child: Container(
+                    height: 200,
+                    width: 410,
+                    child: Image.asset(
+                      "images/um.png", // Replace this with the correct path for your image
+                      fit: BoxFit.fitHeight,
+                    ),
+                  ),
                 ),
-              )),
-          Positioned(
-              top: 250,
-              left: 10,
-              right: 10,
-              child: Container(
-                height: 500,
-                width: double.infinity,
+              ),
+              Padding(
+                padding: EdgeInsets.all(10),
                 child: Text(
-                    "Yoon Jong-woo (Im Shi-wan) a young guy in his 20s moves from the countryside to Seoul after getting a job offer.\n\nNot being from a rich household,he looks for a cheap place to rent and stumbles upon Eden Studio, a hostel that shares its kitchen and bathroom with other problematic and abnormal residents.\n\n He is not happy about his residence but decides to put up with it for 6 months until he saves enough money to move out. But when disturbing events start taking place in the hostel, he soon realizes that he unknowingly got trapped in a nightmare.",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                    )),
-              )),
-        ]));
+                  "Ms. Um, whose real name remains an enigmatic mystery, stands as the imposing landlord of a peculiar residence known for its eerie reputation. Tall and striking, she possesses an air of intimidating elegance, with piercing eyes that seem to dissect one's thoughts. Her demeanor is both commanding and unnerving, her every movement calculated and precise.\n\nBehind her facade as a landlord lies a mastermind adept at manipulating the strings of chaos. Underneath her seemingly composed exterior, she harbors a complex, labyrinthine mind, orchestrating a web of unsettling events within the walls of her property. She exudes an unsettling charm, capable of luring unsuspecting souls into her intricate designs with a disarming smile.\n\nMs. Um is the clandestine leader of a clandestine group of individuals, each bearing a penchant for the unconventional and the macabre. As the linchpin of this group of psychopaths, she holds an iron grip on their loyalty, utilizing their twisted inclinations to her advantage. Her influence over them is profound, fostering an allegiance rooted in both fear and admiration.\n\nShe operates in the shadows, weaving a tapestry of psychological manipulation and sinister schemes, all while maintaining the façade of a responsible landlord. Her enigmatic nature and chilling charisma make her a figure shrouded in mystery and fear, leaving those who encounter her questioning her true intentions and the depths of her malevolence.",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+              SizedBox(
+                  height:
+                      100), // Adding some extra space at the end for better scrolling
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }

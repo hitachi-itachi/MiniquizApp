@@ -45,7 +45,7 @@ class hong extends StatelessWidget {
                 height: 500,
                 width: double.infinity,
                 child: Text(
-                    "Yoon Jong-woo (Im Shi-wan) a young guy in his 20s moves from the countryside to Seoul after getting a job offer.\n\nNot being from a rich household,he looks for a cheap place to rent and stumbles upon Eden Studio, a hostel that shares its kitchen and bathroom with other problematic and abnormal residents.\n\n He is not happy about his residence but decides to put up with it for 6 months until he saves enough money to move out. But when disturbing events start taking place in the hostel, he soon realizes that he unknowingly got trapped in a nightmare.",
+                    "Hong Nam Bok, tainted by a sexual assault accusation, faced a failed business venture. His unsettling psyche unraveled a hidden psychopathic nature. The stain of allegations and financial ruin marred his existence, fostering a disturbingly troubled soul, shrouded in the shadows of his shattered aspirations and inner turmoil.",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,

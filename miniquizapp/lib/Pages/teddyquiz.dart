@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:miniquizapp/Pages/endPage.dart';
 import 'package:miniquizapp/Pages/quiz2.dart';
 
 class quizPage extends StatefulWidget {
@@ -7,6 +8,41 @@ class quizPage extends StatefulWidget {
 
   @override
   _QuizPageState createState() => _QuizPageState();
+
+  void onTap() {}
+}
+
+int counter = 0;
+int counter2 = 0;
+
+class ButtonController extends ChangeNotifier {
+  int _counter = 0;
+  int _counter1 = 0;
+  int _counter2 = 0;
+
+  int get counter => _counter;
+  int get counter1 => _counter1;
+  int get counter2 => _counter2;
+  //bool _isButtonClicked = false;
+
+  //bool get isButtonClicked => _isButtonClicked;
+//third button
+  void onTap2() {
+    _counter2++;
+    notifyListeners();
+  }
+
+//first button
+  void onTap1() {
+    _counter1++;
+    notifyListeners();
+  }
+
+//second button
+  void onTap() {
+    _counter++;
+    notifyListeners();
+  }
 }
 
 class _QuizPageState extends State<quizPage> {
@@ -29,8 +65,10 @@ class _QuizPageState extends State<quizPage> {
       child: Text('Next', style: TextStyle(fontSize: 20.0)),
       backgroundColor: Colors.blue,
       onPressed: () {
+        /*
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => quizPage2()));
+            */
         // Add your onPressed logic here
       },
     );
@@ -38,6 +76,9 @@ class _QuizPageState extends State<quizPage> {
 
   @override
   Widget build(BuildContext context) {
+    final ButtonController _count = ButtonController();
+    final ButtonController _count1 = ButtonController();
+    final ButtonController _count2 = ButtonController();
     return Scaffold(
         appBar: AppBar(
           title: Text("Question 1: What animal is this?",
@@ -54,8 +95,14 @@ class _QuizPageState extends State<quizPage> {
             child: Text('Next', style: TextStyle(fontSize: 20.0)),
             backgroundColor: Colors.blue,
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => quizPage2()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => quiz2(
+                            counter2counter2: _count2.counter2,
+                            counter: _count.counter,
+                            counter1: _count1._counter1,
+                          )));
               // Add your onPressed logic here
             },
           ),
@@ -90,8 +137,19 @@ class _QuizPageState extends State<quizPage> {
                 children: <Widget>[
                   GestureDetector(
                     onTap: () {
+                      // _count1.onTap1();
                       changeColor();
                       nextButton();
+                      int one = _count1.counter1;
+                      one++;
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => quiz2(
+                                    counter2counter2: _count2.counter2,
+                                    counter1: one,
+                                    counter: _count.counter,
+                                  ))); //// Call fun
                     },
                     child: Container(
                       alignment: Alignment.center,
@@ -119,7 +177,16 @@ class _QuizPageState extends State<quizPage> {
               children: <Widget>[
                 GestureDetector(
                   onTap: () {
-                    changeColor(); // Call function to change color on tap
+                    _count.onTap();
+                    changeColor();
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => quiz2(
+                                  counter2counter2: _count2.counter2,
+                                  counter1: _count1.counter1,
+                                  counter: _count.counter,
+                                ))); //// Call function to change color on tap
                   },
                   child: Container(
                     alignment: Alignment.center,
@@ -148,7 +215,19 @@ class _QuizPageState extends State<quizPage> {
               children: <Widget>[
                 GestureDetector(
                   onTap: () {
+                    //_count2.onTap2();
                     changeColor();
+                    nextButton();
+                    int two = _count2.counter2;
+                    two++;
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => quiz2(
+                                  counter2counter2: two,
+                                  counter1: _count.counter1,
+                                  counter: _count.counter,
+                                ))); //// Call fun
                   },
                   child: Container(
                     alignment: Alignment.center,

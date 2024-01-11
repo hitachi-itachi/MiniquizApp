@@ -38,14 +38,14 @@ class Dentist extends StatelessWidget {
                 ),
               )),
           Positioned(
-              top: 250,
+              top: 240,
               left: 10,
               right: 10,
               child: Container(
                 height: 500,
                 width: double.infinity,
                 child: Text(
-                    "Yoon Jong-woo (Im Shi-wan) a young guy in his 20s moves from the countryside to Seoul after getting a job offer.\n\nNot being from a rich household,he looks for a cheap place to rent and stumbles upon Eden Studio, a hostel that shares its kitchen and bathroom with other problematic and abnormal residents.\n\n He is not happy about his residence but decides to put up with it for 6 months until he saves enough money to move out. But when disturbing events start taking place in the hostel, he soon realizes that he unknowingly got trapped in a nightmare.",
+                    "Seo Moon-jo is a charismatic, psychotic killer with a chilling dual identity as a dentist. Beneath his charming facade lies a twisted mind, adept at manipulating others. Moon-jo's unsettling charm masks his sinister nature, allowing him to seamlessly blend into society while orchestrating his malevolent deeds. As a skilled dentist, he uses his profession as a guise, concealing his darker intentions. \n\nHis charismatic persona draws people in, but behind closed doors, he embodies a dangerous psychopath, manipulating and inflicting harm without remorse, driven by a disturbing inner compulsion. Moon-jo is a haunting blend of charm and psychosis.",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
