@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:miniquizapp/Pages/Sypnosis.dart';
-import 'package:miniquizapp/Pages/teddyquiz.dart';
+import 'package:miniquizapp/quiz/teddyquiz.dart';
 import 'package:miniquizapp/Pages/Character.dart';
 
 class homePage extends StatefulWidget {

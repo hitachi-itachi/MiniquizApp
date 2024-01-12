@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:miniquizapp/Pages/homePage.dart';
-import 'package:miniquizapp/Pages/teddyquiz.dart';
+import 'package:miniquizapp/quiz/teddyquiz.dart';
 
 void main() {
   runApp(const myApp());

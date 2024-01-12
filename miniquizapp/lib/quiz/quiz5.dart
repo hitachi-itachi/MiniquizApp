@@ -1,20 +1,20 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:miniquizapp/Pages/endPage.dart';
-import 'package:miniquizapp/Pages/quiz2.dart';
-import 'package:miniquizapp/Pages/quiz2.dart';
-import 'package:miniquizapp/Pages/teddyquiz.dart';
-import 'package:miniquizapp/Pages/teddyquiz.dart';
-import 'package:miniquizapp/Pages/teddyquiz.dart';
+import 'package:miniquizapp/quiz/endPage.dart';
+import 'package:miniquizapp/quiz/quiz2.dart';
+import 'package:miniquizapp/quiz/quiz2.dart';
+import 'package:miniquizapp/quiz/teddyquiz.dart';
+import 'package:miniquizapp/quiz/teddyquiz.dart';
+import 'package:miniquizapp/quiz/teddyquiz.dart';
 
 import 'teddyquiz.dart';
 
-class quiz2 extends StatefulWidget {
+class quiz5 extends StatefulWidget {
   final int counter;
   final int counter1;
   final int counter2counter2;
 
-  const quiz2({
+  const quiz5({
     Key? key,
     required this.counter,
     required this.counter1,
@@ -41,7 +41,7 @@ class ButtonController extends ChangeNotifier {
 }
 */
 
-class _QuizPageState extends State<quiz2> {
+class _QuizPageState extends State<quiz5> {
   Color buttonColor =
       Color.fromARGB(255, 250, 250, 250); // Initial color of the button
   Color button1Color = Colors.white;
@@ -72,13 +72,16 @@ class _QuizPageState extends State<quiz2> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Question 1: What animal is this?",
+          toolbarHeight: 100,
+          title: Text("Question 5: You like spicy food.",
+              textAlign: TextAlign.center,
               style: TextStyle(
+                color: Colors.white,
                 fontSize: 20.0,
                 fontWeight: FontWeight.bold,
               )),
           centerTitle: true,
-          backgroundColor: Colors.orange,
+          backgroundColor: Color.fromARGB(255, 106, 39, 200),
         ),
         floatingActionButton: Visibility(
           visible: showFloatingButton,
@@ -104,7 +107,7 @@ class _QuizPageState extends State<quiz2> {
                   height: 200,
                   width: 410,
                   child: Image.asset(
-                    "images/teddy.png",
+                    "images/spicy.png",
                     fit: BoxFit.fitHeight,
                   ),
                   decoration: BoxDecoration(
@@ -139,7 +142,7 @@ class _QuizPageState extends State<quiz2> {
                       alignment: Alignment.center,
                       height: 100,
                       width: 300,
-                      child: Text("Cow",
+                      child: Text("Agree",
                           style: TextStyle(
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
@@ -178,7 +181,7 @@ class _QuizPageState extends State<quiz2> {
                     alignment: Alignment.center,
                     height: 100,
                     width: 300,
-                    child: Text("Bear",
+                    child: Text("Neutral",
                         style: TextStyle(
                           fontSize: 20.0,
                           fontWeight: FontWeight.bold,
@@ -218,7 +221,7 @@ class _QuizPageState extends State<quiz2> {
                     alignment: Alignment.center,
                     height: 100,
                     width: 300,
-                    child: Text("Dog",
+                    child: Text("Disagree",
                         style: TextStyle(
                           fontSize: 20.0,
                           fontWeight: FontWeight.bold,
