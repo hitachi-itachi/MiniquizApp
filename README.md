@@ -6,7 +6,7 @@ This app is an inspiration drawn from a recent drama I watched, "Strangers from 
 # TechStack:
 Dart
 
-#Functionality:
+# Functionality:
 This App have three widgets, Synopsis, Chracters, Quiz
 
 ## Synopsis
