@@ -4,7 +4,7 @@ This app is an inspiration drawn from a recent drama I watched, "Strangers from 
 ![bandicam 2024-01-13 01-08-17-492](https://github.com/hitachi-itachi/MiniquizApp/assets/64311133/6d8c5335-dcff-47ba-959d-fbb89143389d)
 
 # TechStack:
-Dart
+Dart, Flutter
 
 # Functionality:
 This App have three widgets, Synopsis, Chracters, Quiz
